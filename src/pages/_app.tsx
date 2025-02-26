@@ -17,18 +17,15 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
   useEffect(() => {
     // Google Analytics 초기화 (환경 변수가 설정되었을 때만)
     if (process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS) {
-      ReactGA.initialize(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS);
-
-      // 페이지 뷰 추적
-      const handleRouteChange = (url: string) => {
-        ReactGA.send({ hitType: 'page_view', page: url });
-      };
-
-      router.events.on('routeChangeComplete', handleRouteChange);
-
-      return () => {
-        router.events.off('routeChangeComplete', handleRouteChange);
-      };
+      // ReactGA.initialize(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS);
+      // // 페이지 뷰 추적
+      // const handleRouteChange = (url: string) => {
+      //   ReactGA.send({ hitType: 'page_view', page: url });
+      // };
+      // router.events.on('routeChangeComplete', handleRouteChange);
+      // return () => {
+      //   router.events.off('routeChangeComplete', handleRouteChange);
+      // };
     } else {
       console.warn('Google Analytics 추적 ID가 설정되지 않았습니다.');
     }
