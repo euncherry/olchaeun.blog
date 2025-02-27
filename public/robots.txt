@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://olchaeun-blog.vercel.app
+
+# Sitemaps
+Sitemap: https://olchaeun-blog.vercel.app/sitemap.xml

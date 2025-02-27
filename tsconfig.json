@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es2020",
     "module": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -16,7 +16,11 @@
     "jsx": "preserve",
     "jsxImportSource": "@emotion/react",
     "incremental": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "types": ["react", "node"],
+    "paths": {
+      "react": ["./node_modules/@types/react"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "site.config.js"],
   "exclude": ["node_modules"]
